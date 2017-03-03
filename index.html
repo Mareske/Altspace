@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html><body>
+<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/AltspaceVR/aframe-altspace-component/v1.4.0/dist/aframe-altspace-component.min.js"></script>
+ 
+<!-- set up the scene -->
+<a-scene altspace>
+ 
+    <!-- Preload the Model -->
+    <a-assets>
+		<a-asset-item id="levelOne" src="Assets/Meshes/LevelOne.obj"></a-asset-item>
+		<a-asset-item id="levelOneMat" src="Assets/Materials/LevelOne.mtl"></a-asset-item>
+    </a-assets>
+ 
+    <!-- Instantiate the Model -->
+	<a-obj-model src="#levelOne" mtl="#levelOneMat" position="0 1 0" rotation="0 0 0" scale="0.5 0.5 0.5" n-mesh-collider="type: environment"></a-obj-model>
+ 
+    <!-- add a view camera (2d only) -->
+    <a-entity position='0 0 2'>
+        <a-camera></a-camera>
+    </a-entity>
+ 
+</a-scene>
+ 
+</body></html>
+
+
